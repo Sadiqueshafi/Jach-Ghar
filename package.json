@@ -31,6 +31,7 @@
     "@types/html2canvas": "0.0.36",
     "animate.css": "^4.1.1",
     "bcrypt": "^5.0.0",
+    "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.6.0",
     "bootstrap-material-design": "^4.1.3",
