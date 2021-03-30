@@ -1,0 +1,15 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.a:focus {
+  outline: none;
+  border: 0;
+}
+
+.navbar-nav{
+  margin-left:20px
+
+}
+ul{
+  text-align: right;
+}

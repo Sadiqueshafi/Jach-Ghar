@@ -1,0 +1,110 @@
+<!-- <div class="container"> -->
+
+        <!-- <div class="w3-container w3-center"> -->
+
+
+        <!-- </div> -->
+        <div class="container">
+          <div class="row">
+              <div class="col-md-12 mx-auto ">
+                <mat-card>
+                      <!-- <div class="card-header">
+                      </div> -->
+                      <h1 class="EmployDesign "><b>JANCH GHAR FORM </b></h1>
+                      <div class="card-body">
+        <form class="form" [formGroup]="JachGhar" (ngSubmit)="onSubmit()">
+        <!-- <div class="row">
+        </div> -->
+        <div class="form-group">
+        <div class="row animate__backInRight">
+          <div class="input-group col-md-2 col-xl-2 col-sm-12 " >
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Date</span>
+              <input type="date" class="form-control " formControlName="date" id="date" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required>
+            </div>
+            </div>
+          </div>
+        </div>
+
+           <div class="form-group" [ngClass]="{'has-error':JachGhar.get('patientName').errors && (JachGhar.get('patientName').touched ||JachGhar.get('patientName').dirty) }">
+          <label for="patientName">Name of the Patient :- </label>
+          <input type="text" class="form-control" id="patientName" formControlName="patientName" name="patientName" aria-describedby="nameHelp" >
+          <span class="help-block" *ngIf="JachGhar.get('patientName').errors && (JachGhar.get('patientName').touched ||JachGhar.get('patientName').dirty)">
+          <span class="text-danger" *ngIf="JachGhar.get('patientName').errors.required">
+                               Please Enter PatientName
+                            </span></span>
+                            <!-- <mat-error>Please Enter Your Name</mat-error> -->
+        </div>
+        <div class="row">
+          <div class="form-group col-md-12 col-sm-12" [ngClass]="{'has-error':JachGhar.get('age').errors && (JachGhar.get('age').touched ||JachGhar.get('age').dirty)}">
+            <label for="name">Age :- </label>
+            <input type="number" class="form-control" id="age" formControlName="age" aria-describedby="nameHelp" name="name" >
+            <span class="help-block" *ngIf="JachGhar.get('age').errors && (JachGhar.get('age').touched ||JachGhar.get('age').dirty)">
+              <span class="text-danger" *ngIf="JachGhar.get('age').errors.required">
+                                    Please Enter Patient Age
+                                </span></span>
+          </div>
+          <div class="form-group col-md-12"[ngClass]="{'has-error':JachGhar.get('sex').errors && (JachGhar.get('sex').touched ||JachGhar.get('sex').dirty)}">
+            <label for="Grouping">Sex:-</label>
+            <select (change)="changeSex($event)" class="form-control" formControlName="sex">
+              <span class="help-block" *ngIf="JachGhar.get('sex').errors && (JachGhar.get('sex').touched ||JachGhar.get('sex').dirty)">
+                <span class="text-danger" *ngIf="JachGhar.get('sex').errors.required">
+                                      Please Enter Patient Age
+                                  </span></span>
+              <option>Select Group</option>
+              <option *ngFor ="let sex of Sex">
+                {{sex}}
+              </option>
+            </select>
+         </div>
+
+        </div>
+        <div class="form-group">
+          <label for="name">Refd. by Dr:-</label>
+          <input type="text" class="form-control" id="position"formControlName="dr" aria-describedby="positionHelp" name="position">
+        </div>
+        <button type="submit" mat-raised-button color="accent">Add</button>
+
+    <!-- <div class="col-md-12 col-sm-12 col-xl-12 main">
+      <div class="row">
+        <div class="col-md-1 col-sm-1 col-xl-1">
+          <button type="button text-center"  mat-raised-button color="primary">BLOOD</button>
+           (click)="openBlood()"
+        </div>
+        <div class="col-md-1 col-sm-1 col-xl-1">
+        <button type="button text-center"(click)="openUrine()" mat-raised-button color="primary">URINE</button>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xl-2">
+        <button type="button text-center" (click)="openUrine()" mat-raised-button color="primary">WIDAL SLIDE TEST</button>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xl-2">
+        <button type="button text-center" (click)="openUrine()" mat-raised-button color="primary">CULTURE AND SENSITIVITY</button>
+        </div>
+      </div> -->
+    <!-- </div> -->
+
+    <!-- <div class="row space">
+        <div class="col-md-6">
+            <label>Note</label>
+        </div>
+        <div class="col-md-6" style="text-align: right;">
+            <label>Examiner</label>
+        </div>
+    </div> -->
+          </form></div>
+          <mat-tab-group mat-align-tabs="center">
+            <mat-tab label="BLOOD"><app-blood></app-blood></mat-tab>
+            <mat-tab  label="URINE"><app-urin></app-urin></mat-tab>
+            <mat-tab disabled label="WIDAL SLIDE TEST">WIDAL SLIDE TEST</mat-tab>
+            <mat-tab disabled label="CULTURE AND SENSITIVITY">CULTURE AND SENSITIVITY</mat-tab>
+          </mat-tab-group>
+          <div class="col text-center">
+            <button type="button"  (click)="finalSubmit()" mat-raised-button color="primary">Submit</button>
+          </div>
+      </mat-card>
+
+    </div>
+
+</div></div>
+
+

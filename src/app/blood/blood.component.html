@@ -1,0 +1,142 @@
+<div class="container">
+  <!-- <mat-card > -->
+    <!-- mat-dialog-content -->
+       <div class="w3-container w3-center w3-animate-zoom ">
+         <!-- <h2 class="EmployDesign"><b>JANCH GHAR</b></h2> -->
+
+       </div>
+       <form  class="example-form" [formGroup]="bloodgrouping" (ngSubmit)="onSubmit()">
+
+<!-- blood group -->
+
+<div class="blood" *ngIf="blood" >
+  <div class="row">
+    <h3 class="bloodgroup col-md-12">BLOOD GROUPING</h3>
+
+    <div class="form-group col-md-12 col-sm-12 col-xl-12">
+      <label for="Grouping" >Grouping :-</label>
+      <select id="grouping" (change)="changegrouping($event)" FormControlName="grouping" class="form-control">
+       <option>Select Group</option>
+        <option [value]="group" *ngFor ="let group of Grouping">
+          {{group}}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-12 col-sm-12 col-xl-12">
+      <label for="Grouping" >RH Type :-</label>
+      <select id="grouping"(change)="rhtypes($event)" FormControlName="rhtype" class="form-control">
+       <option>Select Group</option>
+        <option [value]="RHtype" *ngFor ="let RHtype of Rhtype">
+          {{RHtype}}
+        </option>
+      </select>
+    </div>
+    <div class="form-group col-md-12 col-sm-12 col-xl-12">
+      <label for="Grouping">Blood For V.D.R.L By Strip :- </label>
+      <select id="grouping" (change)="vdrls($event)" FormControlName="vdrl" class="form-control">
+        <option>Select Group</option>
+         <option [value]="strip" *ngFor ="let strip of BloodForVDRLByStrip">
+           {{strip}}
+         </option>
+       </select>
+      </div>
+       <div class="form-group col-md-12 col-sm-12 col-xl-12">
+        <label for="Grouping">Urine of Pregnancy Preg Strip :- </label>
+        <select id="grouping" (change)="urins($event)" FormControlName="urine" class="form-control">
+          <option>Select Group</option>
+           <option [value]="urin" *ngFor ="let urin of BloodForVDRLByStrip">
+             {{urin}}
+           </option>
+         </select>
+  </div>
+</div>
+<div class="text">
+  <h4>Manotoux Test 5 T.U. / 10 T.U. by P.P.D.</h4>
+  <h4>Result After 48 Hours.</h4>
+  <h4>Zone of Induratioins .................................... in diameter with / withour Erythema and Oedema :-</h4>
+</div>
+
+<div class="row">
+<div class="form-group col-md-12 col-sm-12 col-xl-12">
+    <label for="Grouping">HCV Test </label>
+    <select id="hcv" (change)="hcvs($event)" class="form-control" FormControlName="hcv">
+      <option>Selected Group</option>
+      <option [value]="hcv"  *ngFor ="let hcv of Hcv">
+        {{hcv}}
+      </option>
+    </select>
+</div>
+<div class="form-group col-md-12">
+    <label for="Grouping">R.A. Factor </label>
+    <select id="factor" class="form-control" (change)="ras($event)" FormControlName="ra">
+      <option>???</option>
+      <option [value]="ra"  *ngFor ="let ra of Ra">
+        {{ra}}
+      </option>
+    </select>
+</div>
+</div>
+<div class="row">
+<div class="form-group col-md-12">
+    <label for="Grouping">A.S.O Titre</label>
+    <select id="aso" class="form-control" (change)="asos($event)" FormControlName="aso">
+      <option>???</option>
+      <option>???</option>
+      <option>Select Group</option>
+           <option [value]="strip" *ngFor ="let strip of ASO">
+             {{strip}}
+           </option>
+    </select>
+</div>
+    <div class="form-group col-md-12">
+        <label for="Grouping"> Normal Range < 200.00 IU/ML </label>
+        <select id="normal" class="form-control"(change)="normalranges($event)" FormControlName="normalrange">
+          <option>???</option>
+          <option>???</option>
+          <option>Select Group</option>
+          <option [value]="strip" *ngFor ="let strip of Normal">
+            {{strip}}
+          </option>
+
+        </select>
+    </div>
+</div>
+<div class="row">
+    <label class="col-md-12"><u>Remark</u></label>
+</div>
+<mat-radio-group aria-label="Select an option" formControlName="remark">
+  <mat-radio-button value="1">Positive</mat-radio-button>
+  <mat-radio-button value="2">Negative</mat-radio-button>
+</mat-radio-group>
+
+<h6>(1) PI. Falciprum :-</h6>
+<h6>(2) PI. Vivax :-</h6>
+
+<div class="row">
+  <div class="form-group col-md-12 col-sm-12">
+      <label for="Grouping">(A) Serum for HIV Test 1/2 </label>
+      <select id="Serum" (change)="serums($event)" formControlName="serum" class="form-control">
+        <option>Positive</option>
+        <option>Negative</option>
+      </select>
+  </div>
+</div>
+<label for="Grouping">(B) C-Reactive Protein(CRP) </label>
+</div>
+<!-- -->
+<div class="row space">
+  <div class="col-md-6">
+      <label>Note</label>
+  </div>
+  <div class="col-md-6" style="text-align: right;">
+      <label>Examiner</label>
+  </div>
+</div>
+
+  <button type="submit" mat-raised-button color="accent">Add Blood</button>
+
+
+</form>
+<!-- </mat-card> -->
+</div>

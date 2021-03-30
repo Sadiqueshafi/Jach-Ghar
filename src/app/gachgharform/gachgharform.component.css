@@ -1,0 +1,32 @@
+.EmployDesign{
+  margin-top: 10px;
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.bloodgroup{
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+mat-card{
+margin-top: 30px;
+margin-bottom: 30px;
+/* background-color: white; */
+}
+
+.space{
+  margin-top: 20px;
+}
+
+.main{
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+
+/* h1,h2,h3,h4,span{
+} */

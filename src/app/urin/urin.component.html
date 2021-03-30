@@ -1,0 +1,156 @@
+<div class="container">
+  <!-- <mat-card> -->
+       <div class="w3-container w3-center ">
+
+       </div>
+       <form class="example-form" [formGroup]="urinegrouping" (ngSubmit)="onSubmit()">
+
+<div class="urine" *ngIf='Urine'>
+  <div class="row">
+    <h3 class="bloodgroup col-md-12">URINE</h3>
+<label class="col-md-12">PHYSSICAL EXAMINATION MICROSCOPICAL EXIMATION :-</label>
+<div class="form-group col-md-12 col-sm-12 col-xl-12">
+  <label for="quentity" >Quantity :-</label>
+  <select id="quentity" (change)="quantitys($event)" FormControlName="quentity" class="form-control">
+   <option>Select Group</option>
+    <option [value]="quentity" *ngFor ="let quentity of Quantits">
+      {{quentity}}
+    </option>
+  </select>
+</div>
+
+<div class="form-group col-md-12 col-sm-12 col-xl-12">
+  <label for="Specific" >Specific Gravity :-</label>
+  <select id="grouping"(change)="specifics($event)" FormControlName="Specific" class="form-control">
+   <option>Select Group</option>
+    <option [value]="specific" *ngFor ="let specific of Specific">
+      {{specific}}
+    </option>
+  </select>
+</div>
+<div class="form-group col-md-12 col-sm-12 col-xl-12">
+  <label for="Specific" >Colour :-</label>
+  <select id="grouping" (change)="colours($event)" FormControlName="Specific" class="form-control">
+   <option>Select Group</option>
+    <option [value]="colour" *ngFor ="let colour of Colours">
+      {{colour}}
+    </option>
+  </select>
+</div>
+<div class="form-group col-md-12 col-sm-12 col-xl-12">
+  <label for="Sediment">Sediment :- </label>
+  <select id="Sediment"(change)="sediments($event)" FormControlName="sediment" class="form-control">
+    <option>Select Group</option>
+     <option [value]="sediment" *ngFor ="let sediment of Sediments">
+       {{sediment}}
+     </option>
+   </select>
+  </div>
+  <div class="form-group col-md-12 col-sm-12 col-xl-12">
+    <label for="Transparency">Transparency :- </label>
+    <select id="Transparency" (change)="transparencys($event)" FormControlName="transparency" class="form-control">
+      <option>Select Group</option>
+       <option [value]="transparency" *ngFor ="let transparency of Transparency">
+         {{transparency}}
+       </option>
+     </select>
+    </div>
+    <label class="col-md-12">CHEMICAL EXAMINATION :-</label>
+    <label class="col-md-12">R.B.C.:-</label>
+    <label class="col-md-12">QUAKITATIVE:-</label>
+    <div class="form-group col-md-12 col-sm-12 col-xl-12">
+      <label for="reactions" >Reaction :-</label>
+      <select id="reaction" (change)="reactions($event)" FormControlName="reaction" class="form-control">
+       <option>Select Group</option>
+        <option [value]="reaction" *ngFor ="let reaction of Reactions">
+          {{reaction}}
+        </option>
+      </select>
+    </div>
+    <div class="form-group col-md-12 col-sm-12 col-xl-12">
+      <label for="albumin">Albumin :- </label>
+      <select id="albumin" (change)="albumins($event)" FormControlName="albumin" class="form-control">
+        <option>Select Group</option>
+         <option [value]="albumin" *ngFor ="let albumin of Albumin">
+           {{albumin}}
+         </option>
+       </select>
+      </div>
+      <div class="form-group col-md-12 col-sm-12 col-xl-12">
+        <label for="suger">Sugar :- </label>
+        <select id="suger"(change)="sugers($event)"  FormControlName="suger" class="form-control">
+          <option>Select Group</option>
+           <option [value]="suger" *ngFor ="let suger of Suger">
+             {{suger}}
+           </option>
+         </select>
+        </div>
+
+      <div class="form-group col-md-12 col-sm-12 col-xl-12">
+        <label for="acetone">Acetone :- </label>
+        <select id="acetone"  FormControlName="acetone" class="form-control">
+          <option>Select Group</option>
+           <option [value]="transparency" *ngFor ="let acetone of Acetone">
+             {{acetone}}
+           </option>
+         </select>
+        </div>
+
+      <div class="form-group col-md-12 col-sm-12 col-xl-12">
+        <label for="bilesalt">Bile Salt :- </label>
+        <select id="bilesalt" (change)='bilesalts($event)'  FormControlName="bilesalt" class="form-control">
+          <option>Select Group</option>
+           <option [value]="bilesalt" *ngFor ="let bilesalt of BileSalt">
+             {{bilesalt}}
+           </option>
+         </select>
+        </div>
+
+        <div class="form-group col-md-12 col-sm-12 col-xl-12">
+          <label for="bilepigment">Bile Pigment :- </label>
+          <select id="bilepigment" (change)="bilepigments($event)" FormControlName="bilepigment" class="form-control">
+            <option>Select Group</option>
+             <option [value]="bilepigment" *ngFor ="let bilepigment of BilePigment">
+               {{bilepigment}}
+             </option>
+           </select>
+          </div>
+
+      <div class="form-group col-md-12 col-sm-12 col-xl-12">
+        <label for="urobilnogen">Urobilnogen :- </label>
+        <select id="urobilnogen" (change)="urobilnogens($event)" FormControlName="urobilnogen" class="form-control">
+          <option>Select Group</option>
+           <option [value]="urobilnogen" *ngFor ="let urobilnogen of Urobilnogen">
+             {{urobilnogen}}
+           </option>
+         </select>
+        </div>
+
+        <div class="form-group col-md-12 col-sm-12 col-xl-12">
+          <label for="testedbyuristicmethod">Tested by Uristic Method :- </label>
+          <select id="testedbyuristicmethod" (change)="testedbyuristicmethods($event)" FormControlName="testedbyuristicmethod" class="form-control">
+            <option>Select Group</option>
+             <option [value]="testedbyuristicmethod" *ngFor ="let testedbyuristicmethod of TestedByUristicMethod">
+               {{testedbyuristicmethod}}
+             </option>
+           </select>
+          </div>
+
+        <!-- <div class="form-group col-md-12 col-sm-12 col-xl-12">
+          <label for="Grouping">Other :- </label>
+          <select id="grouping"  FormControlName="vdrl" class="form-control">
+            <option>Select Group</option>
+             <option [value]="transparency" *ngFor ="let transparency of Transparency">
+               {{transparency}}
+             </option>
+           </select>
+          </div> -->
+  </div>
+
+</div>
+<!-- <div class="col text-center"> -->
+
+  <button type="submit" mat-raised-button color="accent">Add Urine</button>
+<!-- </div> -->
+
+</form></div>

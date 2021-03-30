@@ -1,0 +1,46 @@
+.tbl{
+  margin-top: 20px;
+}
+
+table{
+  width: 100%;
+}
+.all-detail{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media print {
+  #printPageButton {
+    display: none;
+  }
+}
+
+mat-card-title{
+  margin-top: 20px;
+  text-align: center;
+  color:blue;
+}
+.button{
+display: flex;
+list-style-type: none;
+padding: 0;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+.button li{
+  margin: 15px;
+  width: 85px;
+}
+.button .search{
+  background-color: transparent;
+  border: none;
+  color: blue;
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+.button .search:hover{
+  color: rgb(119, 119, 233);
+}
