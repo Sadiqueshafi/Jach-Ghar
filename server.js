@@ -23,7 +23,7 @@ app.use(url,urinedetail);
 app.use(url,restpassword);
 // app.use('/api',jachghardetail)
 app.use(url,alldata);
-
+app.set('view engine', 'ejs');
 app.use(corse());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -61,12 +61,12 @@ else{
 })
 
 app.get('/*', function(req,res) {
-res.sendFile(path.join(__dirname+'/dist/herohu/index.html'));
+  res.render('index');
 });
-
-if(process.env.NODE_ENV ==='production'){
-  app.use(express.static('dist/herohu'));
-// app.use(express.static('./dist/herohu'))
-}
+app.use(express.static(__dirname + '/public'));
+// if(process.env.NODE_ENV ==='production'){
+//   app.use(express.static('dist/herohu'));
+// // app.use(express.static('./dist/herohu'))
+// }
 // Start the app by listening on the default Heroku port
 app.listen(PORT,console.log(`server is starting at ${PORT}`));
