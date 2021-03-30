@@ -23,6 +23,8 @@ app.use(url,urinedetail);
 app.use(url,restpassword);
 // app.use('/api',jachghardetail)
 app.use(url,alldata);
+// app.set('view engine', 'html');
+app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.use(corse());
 app.use(bodyParser.json());
