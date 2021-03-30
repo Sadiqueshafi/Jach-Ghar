@@ -61,7 +61,7 @@ else{
 })
 
 app.get('/*', function(req,res) {
-  res.render('index');
+  res.render('index.html');
 });
 app.use(express.static(__dirname + '/public'));
 // if(process.env.NODE_ENV ==='production'){
